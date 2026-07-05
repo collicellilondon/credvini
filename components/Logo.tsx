@@ -1,0 +1,1 @@
+export function Logo({compact=false}:{compact?:boolean}){return <div className="logo"><span className="logoMark">CV</span>{!compact&&<div><strong>CredVini</strong><small>Controle. Confiança. Resultados.</small></div>}</div>}
