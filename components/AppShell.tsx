@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Bell, ChartNoAxesCombined, FileText, Landmark, LayoutDashboard, LogOut, Menu, Search, Settings, Users, WalletCards, X } from 'lucide-react';
+import { Bell, ChartNoAxesCombined, FileText, HardDrive, Landmark, LayoutDashboard, LogOut, Menu, Settings, Users, WalletCards, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 const nav = [
@@ -23,6 +23,6 @@ export default function AppShell({active,children,title,subtitle,action,alertCou
         <div className="user"><span>VS</span><div><b>Vinicius Silva</b><small>Administrador local</small></div></div>
       </div>
     </aside>
-    <section className="content"><header><button aria-label="Abrir menu" className="hamb" onClick={()=>setOpen(true)}><Menu/></button><div className="globalSearch"><Search/><input aria-label="Busca global" placeholder="Buscar clientes, empréstimos..."/></div><div className="headRight"><a className="notification" href="/dashboard?view=alerts"><Bell/>{alertCount>0&&<i/>}</a><span className="avatar">VS</span></div></header><main><div className="pageTitle"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>{children}</main></section>
+    <section className="content"><header><button aria-label="Abrir menu" className="hamb" onClick={()=>setOpen(true)}><Menu/></button><div className="localStatus"><HardDrive/><span><b>Operação local</b><small>Dados salvos neste navegador</small></span></div><div className="headRight"><a className="notification" aria-label="Abrir alertas" href="/dashboard?view=alerts"><Bell/>{alertCount>0&&<i/>}</a><span className="avatar">VS</span></div></header><main><div className="pageTitle"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>{children}</main></section>
   </div>;
 }
