@@ -1,12 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Bell, ChartNoAxesCombined, FileText, HardDrive, Landmark, LayoutDashboard, LogOut, Menu, Settings, Users, WalletCards, X } from 'lucide-react';
+import { Bell, ChartNoAxesCombined, FileText, HardDrive, Info, Landmark, LayoutDashboard, LogOut, Menu, Settings, Users, WalletCards, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 const nav = [
   ['dashboard','Visão geral',LayoutDashboard],['clients','Clientes',Users],['loans','Empréstimos',Landmark],
   ['payments','Pagamentos',WalletCards],['alerts','Alertas',Bell],['statements','Extratos',FileText],
-  ['reports','Relatórios',ChartNoAxesCombined],
+  ['reports','Relatórios',ChartNoAxesCombined],['about','Sobre o Sistema',Info],
 ] as const;
 
 export default function AppShell({active,children,title,subtitle,action,alertCount=0}:{active:string;children:React.ReactNode;title:string;subtitle:string;action?:React.ReactNode;alertCount?:number}) {
